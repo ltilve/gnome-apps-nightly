@@ -95,6 +95,18 @@
         },
         {
             "name": "webkitgtk3",
+            "build-options" : {
+                "arch" : {
+		    /* Following tricks to build on aarch64 from webkitgtk3.spec */
+                    "aarch64" : {
+			"cflags": "-DENABLE_YARR_JIT=0 -fno-delete-null-pointer-checks",
+			"cxxflags": "-DENABLE_YARR_JIT=0 -fno-delete-null-pointer-checks",
+                        "config-opts" : [
+                            "--disable-jit"
+                        ]
+                    }
+                }
+            },
             "sources": [
                 {
                     "type": "archive",
