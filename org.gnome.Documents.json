@@ -32,7 +32,8 @@
                 "/share/pkgconfig", "/share/aclocal",
                 "/man", "/share/man", "/share/gtk-doc",
                 "/share/vala",
-                "*.la", "*.a"],
+                "*.la", "*.a",
+                "/bin/gnome-books"],
     "modules": [
         {
             "name": "gnome-online-accounts",
