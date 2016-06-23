@@ -1,0 +1,119 @@
+{
+    "app-id": "org.gnome.Books",
+    "runtime": "org.gnome.Platform",
+    "runtime-version": "master",
+    "sdk": "org.gnome.Sdk",
+    "command": "gnome-books",
+    "tags": ["nightly"],
+    "desktop-file-name-prefix": "(Nightly) ",
+    "finish-args": [
+        /* X11 + XShm access */
+        "--share=ipc", "--socket=x11",
+        /* Wayland access */
+        "--socket=wayland",
+        /* Read-only access to users documents */
+        "--filesystem=xdg-documents:ro", "--filesystem=xdg-download:ro",
+        /* Needs to talk to the network: */
+        "--share=network",
+        /* Tracker access */
+        "--talk-name=org.freedesktop.Tracker1",
+        /* Needed for dconf to work */
+        "--filesystem=xdg-run/dconf", "--filesystem=~/.config/dconf:ro",
+        "--talk-name=ca.desrt.dconf", "--env=DCONF_USER_CONFIG_DIR=.config/dconf"
+    ],
+    "build-options" : {
+        "cflags": "-O2 -g",
+        "cxxflags": "-O2 -g",
+        "env": {
+            "V": "1"
+        }
+    },
+    "cleanup": ["/include", "/lib/pkgconfig",
+                "/share/pkgconfig", "/share/aclocal",
+                "/man", "/share/man", "/share/gtk-doc",
+                "/share/vala",
+                "*.la", "*.a",
+                "/bin/gnome-documents"],
+    "modules": [
+        {
+            "name": "gnome-desktop",
+            "config-opts": ["--disable-debug-tools"],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "git://git.gnome.org/gnome-desktop"
+                }
+            ]
+        },
+        {
+            "name": "popplerdata",
+            "no-autogen": true,
+            "make-install-args": ["prefix=/app"],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "http://poppler.freedesktop.org/poppler-data-0.4.7.tar.gz",
+                    "sha256": "e752b0d88a7aba54574152143e7bf76436a7ef51977c55d6bd9a48dccde3a7de"
+                }
+            ]
+        },
+        {
+            "name": "poppler",
+            "config-opts": [ "--disable-libopenjpeg" ],
+            "cleanup": [ "/bin" ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "http://poppler.freedesktop.org/poppler-0.36.0.tar.xz",
+                    "sha256": "93cc067b23c4ef7421380d3e8bd7c940b2027668446750787d7c1cb42720248e"
+                }
+            ]
+        },
+        {
+            "name": "evince",
+            "cleanup": [ "/share/GConf", "/share/help" ],
+            "config-opts": [ "--disable-nautilus", "--disable-viewer",
+                             "--disable-previewer", "--disable-dbus",
+                             "--disable-browser-plugin", "--enable-introspection" ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "git://git.gnome.org/evince"
+                }
+            ]
+        },
+        {
+            "name": "tracker",
+            "cleanup": [ "/bin", "/etc", "/libexec" ],
+            "config-opts": [ "--disable-miner-apps", "--disable-static",
+                             "--disable-tracker-extract", "--disable-tracker-needle",
+                             "--disable-tracker-preferences", "--disable-artwork",
+                             "--disable-tracker-writeback", "--disable-miner-user-guides"],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "git://git.gnome.org/tracker"
+                }
+            ]
+        },
+        {
+            "name": "libgepub",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "git://git.gnome.org/libgepub"
+                }
+            ]
+        },
+        {
+            "name": "gnome-books",
+            "config-opts": [ "--disable-documentation"],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "git://git.gnome.org/gnome-documents"
+                }
+            ]
+        }
+    ]
+}
