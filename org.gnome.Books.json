@@ -106,6 +106,15 @@
             ]
         },
         {
+            "name": "gnome-epub-thumbnailer",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "git://git.gnome.org/gnome-epub-thumbnailer"
+                }
+            ]
+        },
+        {
             "name": "gnome-books",
             "config-opts": [ "--disable-documentation"],
             "sources": [
