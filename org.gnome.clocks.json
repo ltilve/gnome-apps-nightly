@@ -57,7 +57,7 @@
         },
         {
             "name": "gnome-desktop",
-            "config-opts": ["--disable-debug-tools"],
+            "config-opts": ["--disable-debug-tools", "--disable-udev"],
             "sources": [
                 {
                     "type": "git",

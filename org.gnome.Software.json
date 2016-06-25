@@ -120,7 +120,7 @@
         },
         {
             "name": "gnome-desktop",
-            "cleanup": [ "/libexec" ],
+            "config-opts": ["--disable-debug-tools", "--disable-udev"],
             "sources": [
                 {
                     "type": "git",
