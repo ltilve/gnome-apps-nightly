@@ -9,7 +9,6 @@
   "rename-appdata-file": "geary.appdata.xml",
   "rename-icon": "geary",
   "copy-icon": true,
-  "separate-locales": false,
   "finish-args": [
         /* X11 + XShm access */
         "--share=ipc", "--socket=x11",
