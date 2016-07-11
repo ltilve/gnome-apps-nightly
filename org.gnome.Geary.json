@@ -52,7 +52,7 @@
 		            /* Lie about our arch - no actual compilation happens here. */
                     "arm": {
                         "config-opts": [ "--build=amd64" ]
-                    }
+                    },
                     "aarch64": {
                         "config-opts": [ "--build=amd64" ]
                     }
@@ -76,8 +76,8 @@
             ],
             "build-options" : {
                 "arch" : {
-                    "x86_64" : { "config-opts" : [ "--enable-jit" ] }
-                    "i386" : { "config-opts" : [ "--enable-jit" ] }
+                    "x86_64" : { "config-opts" : [ "--enable-jit" ] },
+                    "i386" : { "config-opts" : [ "--enable-jit" ] },
 		            /* Following tricks to build on aarch64 from bijiben.json */
                     "aarch64" : {
 			            "cflags": "-DENABLE_YARR_JIT=0 -fno-delete-null-pointer-checks",
