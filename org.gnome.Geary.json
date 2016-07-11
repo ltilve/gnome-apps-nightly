@@ -47,6 +47,16 @@
   "modules": [
         {
             "name": "gnome-doc-utils",
+            "build-options": {
+                "arch" : {
+		            /* Lie about our arch - no actual compilation happens here. */
+                    "aarch64": {
+                        "config-opts": [
+                            "--build=amd64"
+                        ]
+                    }
+                }
+            },
             "sources": [
                 {
                     "type": "archive",
