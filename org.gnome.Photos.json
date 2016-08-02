@@ -154,6 +154,10 @@
                     "type": "archive",
                     "url": "http://www.exiv2.org/exiv2-0.25.tar.gz",
                     "sha256": "c80bfc778a15fdb06f71265db2c3d49d8493c382e516cb99b8c9f9cbde36efa4"
+                },
+                {
+                    "type": "patch",
+                    "path": "exiv2-no-builddir.patch"
                 }
             ]
         },
