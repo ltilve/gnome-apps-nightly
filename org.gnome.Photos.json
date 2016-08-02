@@ -112,6 +112,13 @@
                     "type": "archive",
                     "url": "http://www.ece.uvic.ca/~frodo/jasper/software/jasper-1.900.1.zip",
                     "sha256": "6b905a9c2aca2e275544212666eefc4eb44d95d0a57e4305457b407fe63f9494"
+                },
+                /* config.guess is too old to know about the ARM and
+                 * Aarch64 ABIs
+                 */
+                {
+                    "type": "shell",
+                    "commands": [ "autoreconf --verbose --force --install" ]
                 }
             ]
         },
