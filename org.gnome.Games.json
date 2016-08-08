@@ -33,6 +33,9 @@
     "modules": [
         {
             "name": "retro-gtk",
+            "config-opts": [
+                "--disable-static"
+            ],
             "sources": [
                 {
                     "type": "git",
@@ -52,7 +55,12 @@
         "org.lua.json",
         {
             "name": "grilo",
-            "config-opts": [ "--enable-grl-net", "--enable-grl-pls", "--disable-static" ],
+            "config-opts": [
+                "--enable-grl-net",
+                "--enable-grl-pls",
+                "--disable-gtk-doc",
+                "--disable-static"
+            ],
             "sources": [
                 {
                     "type": "git",
