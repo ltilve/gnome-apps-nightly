@@ -47,15 +47,6 @@
                 }
             ]
         },
-        {
-            "name": "retro-plugins",
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://git.gnome.org/browse/retro-plugins"
-                }
-            ]
-        },
         "org.lua.json",
         {
             "name": "grilo",
