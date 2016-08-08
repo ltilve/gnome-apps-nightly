@@ -36,7 +36,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "git://git.gnome.org/retro-gtk"
+                    "url": "https://git.gnome.org/browse/retro-gtk"
                 }
             ]
         },
@@ -45,7 +45,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "git://git.gnome.org/retro-plugins"
+                    "url": "https://git.gnome.org/browse/retro-plugins"
                 }
             ]
         },
@@ -56,7 +56,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "git://git.gnome.org/grilo"
+                    "url": "https://git.gnome.org/browse/grilo"
                 }
             ],
             "cleanup": [ "/include", "/bin" ]
@@ -68,7 +68,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "git://git.gnome.org/grilo-plugins"
+                    "url": "https://git.gnome.org/browse/grilo-plugins"
                 }
             ],
             "cleanup": [ "/include" ]
@@ -82,7 +82,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "git://git.gnome.org/tracker"
+                    "url": "https://git.gnome.org/browse/tracker"
                 }
             ]
         },
@@ -91,7 +91,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "git://git.gnome.org/gnome-games"
+                    "url": "https://git.gnome.org/browse/gnome-games"
                 }
             ]
         }
