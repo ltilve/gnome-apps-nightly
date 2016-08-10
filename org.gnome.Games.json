@@ -19,7 +19,7 @@
         "--filesystem=xdg-run/dconf", "--filesystem=~/.config/dconf:ro",
         "--talk-name=ca.desrt.dconf", "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
         /* Needed to find the ROMs */
-        "--filesystem=home"
+        "--filesystem=home:ro"
     ],
     "build-options" : {
         "cflags": "-O2 -g",
