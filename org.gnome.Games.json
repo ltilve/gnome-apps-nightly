@@ -18,6 +18,8 @@
         /* Needed for dconf to work */
         "--filesystem=xdg-run/dconf", "--filesystem=~/.config/dconf:ro",
         "--talk-name=ca.desrt.dconf", "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
+        /* Needed to get the games info from The Games DB */
+        "--share=network",
         /* Needed to find the ROMs */
         "--filesystem=home:ro"
     ],
