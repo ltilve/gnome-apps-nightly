@@ -1,0 +1,30 @@
+From 811ac05426d5d0be06e929c634ee2076b51fba29 Mon Sep 17 00:00:00 2001
+From: Mathieu Bridon <bochecha@daitauha.fr>
+Date: Tue, 16 Aug 2016 15:26:51 +0200
+Subject: [PATCH] Allow not running configure at the end of autogen
+
+This implements the OSTree Build API, which makes it much easier to
+build Exempi in Flatpak.
+
+https://github.com/cgwalters/build-api
+---
+ autogen.sh | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+
+diff --git a/autogen.sh b/autogen.sh
+index 8c27a23..7f7cbe2 100755
+--- a/autogen.sh
++++ b/autogen.sh
+@@ -46,5 +46,7 @@ if test -z "$*"; then
+ 	echo "the $0 command line."
+ fi
+ 
+-echo "Running configure..."
+-$topsrcdir/configure --enable-maintainer-mode "$@"
++if [ ! $NOCONFIGURE == "1" ]; then
++	echo "Running configure..."
++	$topsrcdir/configure --enable-maintainer-mode "$@"
++fi
+-- 
+2.7.4
+
