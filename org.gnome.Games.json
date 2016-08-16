@@ -35,6 +35,7 @@
                 "/share/dbus-1", "/share/doc", "/share/gir-1.0"
     ],
     "modules": [
+        "libretro-cores/libretro-bsnes.json",
         {
             "name": "retro-gtk",
             "config-opts": [
