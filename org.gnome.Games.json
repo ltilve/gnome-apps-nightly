@@ -35,8 +35,13 @@
                 "/share/dbus-1", "/share/doc", "/share/gir-1.0"
     ],
     "modules": [
+        /* Emulator cores for libretro
+
+           We build them first, because some of them are very big, and they
+           change more rarely than the rest of the modules. */
         "libretro-cores/libretro-bsnes.json",
         "libretro-cores/libretro-pcsx_rearmed.json",
+        /* End libretro cores */
         {
             "name": "retro-gtk",
             "config-opts": [
