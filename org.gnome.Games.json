@@ -36,6 +36,7 @@
     ],
     "modules": [
         "libretro-cores/libretro-bsnes.json",
+        "libretro-cores/libretro-pcsx_rearmed.json",
         {
             "name": "retro-gtk",
             "config-opts": [
