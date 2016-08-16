@@ -1,0 +1,26 @@
+From cefbad2ed4a04c79686d4354fe9c12faaba4ef0f Mon Sep 17 00:00:00 2001
+From: Mathieu Bridon <bochecha@daitauha.fr>
+Date: Tue, 16 Aug 2016 15:41:34 +0200
+Subject: [PATCH] Lower the minimum gettext version
+
+We don't have such a recent gettext in the SDK.
+---
+ configure.ac | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/configure.ac b/configure.ac
+index 4d6e4da..395abfd 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -56,7 +56,7 @@ AC_SUBST(GETTEXT_PACKAGE)
+ AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE,"$GETTEXT_PACKAGE",
+                    [the gettext translation domain])
+ 
+-AM_GNU_GETTEXT_VERSION([0.19.8])
++AM_GNU_GETTEXT_VERSION([0.19.7])
+ AM_GNU_GETTEXT([external])
+ 
+ GLIB_GSETTINGS
+-- 
+2.7.4
+

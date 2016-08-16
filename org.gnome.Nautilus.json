@@ -94,6 +94,10 @@
                 {
                     "type": "git",
                     "url": "https://git.gnome.org/browse/nautilus"
+                },
+                {
+                    "type": "patch",
+                    "path": "nautilus-Lower-the-minimum-gettext-version.patch"
                 }
             ]
         }
