@@ -20,6 +20,8 @@
         "--talk-name=ca.desrt.dconf", "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
         /* Needed to get the games info from The Games DB */
         "--share=network",
+        /* Needed for joypads, until we have a proper portal */
+        "--device=all",
         /* Needed to find the ROMs */
         "--filesystem=home:ro"
     ],
@@ -104,6 +106,15 @@
                 {
                     "type": "git",
                     "url": "https://git.gnome.org/browse/tracker"
+                }
+            ]
+        },
+        {
+            "name": "libevdev",
+            "sources": [
+                {
+                     "type": "git",
+                     "url": "https://anongit.freedesktop.org/git/libevdev.git"
                 }
             ]
         },
