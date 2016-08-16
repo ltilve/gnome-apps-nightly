@@ -34,7 +34,7 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "http://downloads.sourceforge.net/libexif/libexif-0.6.21.tar.bz2"
+                    "url": "https://downloads.sourceforge.net/libexif/libexif-0.6.21.tar.bz2",
                 }
             ]
         },
@@ -43,7 +43,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "git://anongit.freedesktop.org/git/exempi.git"
+                    "url": "https://anongit.freedesktop.org/git/exempi.git"
                 }
             ]
 
@@ -58,7 +58,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "git://git.gnome.org/tracker"
+                    "url": "https://git.gnome.org/browse/tracker"
                 }
             ]
         },
@@ -68,7 +68,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "git://git.gnome.org/gnome-desktop"
+                    "url": "https://git.gnome.org/browse/gnome-desktop"
                 }
             ]
         },
@@ -78,7 +78,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "git://git.gnome.org/nautilus"
+                    "url": "https://git.gnome.org/browse/nautilus"
                 }
             ]
         }
