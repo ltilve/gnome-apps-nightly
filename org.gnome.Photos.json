@@ -17,6 +17,7 @@
         "--share=network",
         /* Tracker access */
         "--talk-name=org.freedesktop.Tracker1",
+        "--talk-name=org.freedesktop.Tracker1.Miner.Extract",
         /* dleyna-renderer access */
         "--talk-name=com.intel.dleyna-renderer",
         /* SettingsDaemon for org.gnome.SettingsDaemon.Housekeeping:EmptyTrash method */
