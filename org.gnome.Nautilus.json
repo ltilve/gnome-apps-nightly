@@ -48,10 +48,6 @@
                 {
                     "type": "git",
                     "url": "https://anongit.freedesktop.org/git/exempi.git"
-                },
-                {
-                    "type": "patch",
-                    "path": "exempi-Allow-not-running-configure-at-the-end-of-autogen.patch"
                 }
             ]
 
