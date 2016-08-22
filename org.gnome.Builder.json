@@ -31,6 +31,49 @@
                 "*.la", "*.a"],
     "modules": [
         {
+            "name": "python3-jedi",
+            "no-autogen": true,
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://pypi.python.org/packages/source/j/jedi/jedi-0.9.0.tar.gz",
+                    "sha256": "3b4c19fba31bdead9ab7350fb9fa7c914c59b0a807dcdd5c00a05feb85491d31"
+                },
+                {
+                    "type": "file",
+                    "path": "setuptools-makefile",
+                    "dest-filename": "Makefile"
+                }
+            ]
+        },
+        {
+            "name": "python3-lxml",
+            "no-autogen": true,
+            "build-options": {
+                "cflags": "-I/usr/include",
+                "env": {
+                    "XSLT_CONFIG": "pkg-config libxslt",
+                    "XML2_CONFIG": "pkg-config libxml-2.0"
+                }
+            },
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://pypi.io/packages/source/l/lxml/lxml-3.6.4.tar.gz",
+                    "sha256": "61d5d3e00b5821e6cda099b3b4ccfea4527bf7c595e0fb3a7a760490cedd6172"
+                },
+                {
+                    "type": "file",
+                    "path": "setuptools-makefile",
+                    "dest-filename": "Makefile"
+                },
+                {
+                    "type": "patch",
+                    "path": "lxml-Fix-getting-lib-version-when-using-pkg-config.patch"
+                }
+            ]
+        },
+        {
             "name": "libssh2",
             "cmake": true,
             "config-opts": [ "-DCMAKE_INSTALL_LIBDIR:PATH=/app/lib",
