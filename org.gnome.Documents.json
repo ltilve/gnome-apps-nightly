@@ -147,6 +147,15 @@
             ]
         },
         {
+            "name": "libgepub",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "git://git.gnome.org/libgepub"
+                }
+            ]
+        },
+        {
             "name": "gnome-documents",
             "config-opts": [ "--disable-documentation"],
             "sources": [
