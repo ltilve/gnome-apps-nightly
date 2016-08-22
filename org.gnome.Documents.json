@@ -11,8 +11,8 @@
         "--share=ipc", "--socket=x11",
         /* Wayland access */
         "--socket=wayland",
-        /* Read-only access to users documents */
-        "--filesystem=xdg-documents:ro", "--filesystem=xdg-download:ro",
+        /* Access to users documents */
+        "--filesystem=xdg-documents", "--filesystem=xdg-download",
         /* Needs to talk to the network: */
         "--share=network",
         /* Tracker access */
