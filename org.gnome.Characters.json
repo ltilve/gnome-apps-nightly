@@ -23,7 +23,7 @@
                 "/share/pkgconfig", "/share/aclocal",
                 "/man", "/share/man", "/share/gtk-doc",
                 "*.la", "*.a",
-                "/share/dbus-1", "/share/doc", "/share/gir-1.0"
+                "/share/doc", "/share/gir-1.0"
     ],
     "modules": [
         {
