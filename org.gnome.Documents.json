@@ -16,7 +16,7 @@
         /* Needs to talk to the network: */
         "--share=network",
         /* Tracker access */
-        "--talk-name=org.freedesktop.Tracker1"
+        "--talk-name=org.freedesktop.Tracker1",
         /* Needed for dconf to work */
         "--filesystem=xdg-run/dconf", "--filesystem=~/.config/dconf:ro",
         "--talk-name=ca.desrt.dconf", "--env=DCONF_USER_CONFIG_DIR=.config/dconf"
@@ -129,7 +129,7 @@
                              "--disable-browser-plugin", "--enable-introspection" ],
             "sources": [
                 {
-                    "type": "arhive",
+                    "type": "archive",
                     "url": "https://download.gnome.org/sources/evince/3.20/evince-3.20.0.tar.xz",
                     "sha256": "cf8358a453686c2a7f85d245f83fe918c0ce02eb6532339f3e02e31249a5a280"
                 }
