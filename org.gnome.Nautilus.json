@@ -77,6 +77,15 @@
             ]
         },
         {
+            "name": "gnome-autoar",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://git.gnome.org/browse/gnome-autoar"
+                }
+            ]
+        },
+        {
             "name": "nautilus",
             "config-opts": [
                 "--disable-static",
