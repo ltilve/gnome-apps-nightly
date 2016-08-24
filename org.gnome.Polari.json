@@ -68,8 +68,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/polari/3.20/polari-3.20.0.tar.xz",
-                    "sha256": "519402e5a7e7aa684d364523bf16357be748c4d0a08b1297e2dee379b8da440a"
+                    "url": "https://download.gnome.org/sources/polari/3.20/polari-3.20.3.tar.xz",
+                    "sha256": "9085ad756060eb9759471c195cfe6af22b99489b8f28dc05ff4c91ccaf37c2f0"
                 }
             ]
         }

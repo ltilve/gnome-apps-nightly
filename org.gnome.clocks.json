@@ -83,8 +83,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gnome-clocks/3.20/gnome-clocks-3.20.0.tar.xz",
-                    "sha256": "e7a6da2ba3778fcfd77a6734f960319035370b942a3358089b7e712055e1bb17"
+                    "url": "https://download.gnome.org/sources/gnome-clocks/3.20/gnome-clocks-3.20.1.tar.xz",
+                    "sha256": "92ad7b409c5118464af49ca28262ae43e9d377435ad2b10048b23e6e11ae476f"
                 }
             ]
         }

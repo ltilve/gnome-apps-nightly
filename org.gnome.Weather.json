@@ -70,8 +70,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gnome-weather/3.20/gnome-weather-3.20.0.tar.xz",
-                    "sha256": "3d56c59715656c9031b42f4803ee22776a954cd0587f465590ea0f43cec5b46a"
+                    "url": "https://download.gnome.org/sources/gnome-weather/3.20/gnome-weather-3.20.2.tar.xz",
+                    "sha256": "7823ca7c08fa852232b98c2517830e3bd9b0ab80c9ac83f182c18ec140a5c18b"
                 }
             ]
         }

@@ -120,8 +120,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/bijiben/3.20/bijiben-3.20.0.tar.xz",
-                    "sha256": "1fff4eeebe1332a4fad9973132c041f1dbc0e8ab8820e4afff6b42dcc51957f1"
+                    "url": "https://download.gnome.org/sources/bijiben/3.20/bijiben-3.20.2.tar.xz",
+                    "sha256": "5774dfdedb79f5ffe5bac3cebe0816dc7e6410381744dcb999815061dee6a981"
                 }
             ]
         }

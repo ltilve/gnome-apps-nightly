@@ -167,8 +167,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gnome-maps/3.20/gnome-maps-3.20.1.tar.xz",
-                    "sha256": "4874d10a3cfdffd5d1db6084d67b5e8dc8c2db2ff995302b80060ecfc5e99bd5"
+                    "url": "https://download.gnome.org/sources/gnome-maps/3.20/gnome-maps-3.20.3.tar.xz",
+                    "sha256": "055dbe0847c3f1c8fbdbf93d63896f41204642704c2b730e0bf01b7b82f09929"
                 }
             ]
         }
