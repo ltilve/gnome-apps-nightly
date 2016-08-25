@@ -36,12 +36,62 @@
                 "/bin/gnome-documents"],
     "modules": [
         {
+            "name": "gnome-online-accounts",
+            "config-opts": ["--disable-telepathy", "--disable-documentation", "--disable-backend"],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "git://git.gnome.org/gnome-online-accounts"
+                }
+            ]
+        },
+        {
             "name": "gnome-desktop",
             "config-opts": ["--disable-debug-tools", "--disable-udev"],
             "sources": [
                 {
                     "type": "git",
                     "url": "git://git.gnome.org/gnome-desktop"
+                }
+            ]
+        },
+        {
+            "name": "liboauth",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "http://netix.dl.sourceforge.net/project/liboauth/liboauth-1.0.3.tar.gz",
+                    "sha256": "0df60157b052f0e774ade8a8bac59d6e8d4b464058cc55f9208d72e41156811f"
+                }
+            ]
+        },
+        {
+            "name": "libgdata",
+            "config-opts": ["--disable-always-build-tests", "--disable-Werror", "--disable-static" ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "git://git.gnome.org/libgdata"
+                }
+            ]
+        },
+        {
+            /* we need rest-0.7 so we use a tarball for it */
+            "name": "librest",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://git.gnome.org/browse/librest/snapshot/librest-librest-0.7.12.tar.xz",
+                    "sha256": "570917e570e6e8bf55572eb04902d4cf3975c2629df9df96c21be2059d71dab9"
+                }
+            ]
+        },
+        {
+            "name": "libzapojit",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "git://git.gnome.org/libzapojit"
                 }
             ]
         },
