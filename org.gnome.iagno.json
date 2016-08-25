@@ -5,6 +5,7 @@
     "sdk": "org.gnome.Sdk",
     "command": "iagno",
     "rename-desktop-file": "iagno.desktop",
+    "rename-icon": "iagno",
     "rename-appdata-file": "iagno.appdata.xml",
     "tags": ["nightly"],
     "desktop-file-name-prefix": "(Nightly) ",
