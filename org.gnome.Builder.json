@@ -13,11 +13,19 @@
         "--socket=wayland",
         /* We want full fs access */
         "--filesystem=host",
-	/* Needs to talk to the network: */
-	"--share=network",
+        /* Needs to talk to the network: */
+        "--share=network",
+        "--talk-name=org.gtk.vfs.*",
         /* Needed for dconf to work (+ host or homedir read access from above) */
         "--filesystem=xdg-run/dconf", "--filesystem=~/.config/dconf:ro",
-        "--talk-name=ca.desrt.dconf", "--env=DCONF_USER_CONFIG_DIR=.config/dconf"
+        "--talk-name=ca.desrt.dconf", "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
+        /* We need access to auth agents */
+        "--talk-name=org.freedesktop.secrets",
+        /* Needed for various SSL certificates to work */
+        "--env=SSL_CERT_DIR=/etc/ssl/certs",
+        "--env=SSL_CERT_FILE=/etc/ssl/cert.pem",
+        "--filesystem=/etc/ssl:ro",
+        "--filesystem=/etc/ca-certificates:ro"
     ],
     "build-options" : {
         "cflags": "-O2 -g",
