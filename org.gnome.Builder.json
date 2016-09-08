@@ -19,11 +19,13 @@
         /* Needs to talk to the network: */
         "--share=network",
         "--talk-name=org.gtk.vfs.*",
+        "--system-talk-name=org.freedesktop.PolicyKit1",
+        "--system-talk-name=org.gnome.Sysprof2",
         /* Needed for dconf to work (+ host or homedir read access from above) */
         "--filesystem=xdg-run/dconf",
-	"--filesystem=~/.config/dconf:ro",
+        "--filesystem=~/.config/dconf:ro",
         "--talk-name=ca.desrt.dconf",
-	"--env=DCONF_USER_CONFIG_DIR=.config/dconf",
+        "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
         /* We need access to auth agents */
         "--talk-name=org.freedesktop.secrets",
         /* Needed for various SSL certificates to work */
@@ -45,6 +47,38 @@
                 "/share/vala",
                 "*.la", "*.a"],
     "modules": [
+        {
+            "name": "polkit",
+            "config-opts": [ "--disable-polkitd", "--disable-man-pages", "--disable-introspection" ],
+            "rm-configure": true,
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "http://www.freedesktop.org/software/polkit/releases/polkit-0.113.tar.gz",
+                    "sha256": "e1c095093c654951f78f8618d427faf91cf62abdefed98de40ff65eca6413c81"
+                },
+                {
+                    "type": "patch",
+                    "path": "polkit-build-Add-option-to-build-without-polkitd.patch"
+                },
+                {
+                    "type": "file",
+                    "path": "polkit-autogen",
+                    "dest-filename": "autogen.sh"
+                }
+            ]
+        },
+        {
+            "name": "sysprof",
+            "config-opts": [ "--enable-gtk", "--disable-sysprofd" ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/sysprof/3.21/sysprof-3.21.91.tar.xz",
+                    "sha256": "848ac43f3097789bb07267659a6f0e953c8ab6274a142dad924b20b84e5706d4"
+                }
+            ]
+        },
         {
             "name": "python3-jedi",
             "no-autogen": true,
@@ -176,7 +210,6 @@
             ]
         },
         {
-        {
             "name": "devhelp",
             "cleanup": [ "/bin/*" ],
             "sources": [
@@ -186,6 +219,7 @@
                 }
             ]
         },
+        {
             "name": "gnome-builder",
             "config-opts": [ "--enable-tracing", "--enable-debug" ],
             "sources": [
