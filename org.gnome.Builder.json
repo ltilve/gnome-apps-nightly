@@ -138,6 +138,16 @@
             ]
         },
         {
+        {
+            "name": "devhelp",
+            "cleanup": [ "/bin/*" ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "git://git.gnome.org/devhelp"
+                }
+            ]
+        },
             "name": "gnome-builder",
             "sources": [
                 {
