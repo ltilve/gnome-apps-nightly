@@ -159,6 +159,13 @@
                 {
                     "type": "patch",
                     "path": "exiv2-no-builddir.patch"
+                },
+                {
+                    "type": "shell",
+                    "commands": [
+                        "cp -f /usr/share/gnu-config/config.sub ./config/",
+                        "cp -f /usr/share/gnu-config/config.guess ./config/"
+                    ]
                 }
             ]
         },
