@@ -69,17 +69,6 @@
             ]
         },
         {
-            "name": "sysprof",
-            "config-opts": [ "--enable-gtk", "--disable-sysprofd" ],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://download.gnome.org/sources/sysprof/3.21/sysprof-3.21.91.tar.xz",
-                    "sha256": "848ac43f3097789bb07267659a6f0e953c8ab6274a142dad924b20b84e5706d4"
-                }
-            ]
-        },
-        {
             "name": "python3-jedi",
             "no-autogen": true,
             "sources": [
@@ -216,6 +205,17 @@
                 {
                     "type": "git",
                     "url": "git://git.gnome.org/devhelp"
+                }
+            ]
+        },
+        {
+            "name": "sysprof",
+            "config-opts": [ "--enable-gtk", "--with-sysprofd=host" ],
+            "cleanup": [ "/bin/*", "/libexec/sysprof" ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "/home/christian/Projects/sysprof/.git"
                 }
             ]
         },
