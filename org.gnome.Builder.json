@@ -215,7 +215,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "/home/christian/Projects/sysprof/.git"
+                    "url": "git://git.gnome.org/sysprof"
                 }
             ]
         },
