@@ -1,11 +1,11 @@
 {
     "app-id": "org.gnome.Maps",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "master",
+    "runtime-version": "3.22",
+    "branch": "stable",
     "sdk": "org.gnome.Sdk",
     "command": "gnome-maps",
-    "tags": ["nightly"],
-    "desktop-file-name-prefix": "(Nightly) ",
+    "tags": [],
     "finish-args": [
         /* X11 + XShm access */
         "--share=ipc", "--socket=x11",
@@ -66,8 +66,9 @@
             },
             "sources": [
                 {
-                    "type": "git",
-                    "url": "git://git.gnome.org/libgee"
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/libgee/0.18/libgee-0.18.0.tar.xz",
+                    "sha256": "4ad99ef937d071b4883c061df40bfe233f7649d50c354cf81235f180b4244399"
                 }
             ]
         },
@@ -76,8 +77,9 @@
             "config-opts": ["--disable-telepathy", "--disable-documentation", "--disable-backend"],
             "sources": [
                 {
-                    "type": "git",
-                    "url": "git://git.gnome.org/gnome-online-accounts"
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/gnome-online-accounts/3.22/gnome-online-accounts-3.22.0.tar.xz",
+                    "sha256": "aacce93a71bf5e687a45ae0d00f31ea0625ddd8143235d6d8c64c4ec21bbfa33"
                 }
             ]
         },
@@ -85,8 +87,9 @@
             "name": "geocode-glib",
             "sources": [
                 {
-                    "type": "git",
-                    "url": "git://git.gnome.org/geocode-glib"
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/geocode-glib/3.20/geocode-glib-3.20.1.tar.xz",
+                    "sha256": "669fc832cabf8cc2f0fc4194a8fa464cdb9c03ebf9aca5353d7cf935ba8637a2"
                 }
             ]
         },
@@ -95,8 +98,9 @@
             "config-opts": ["--disable-vala"],
             "sources": [
                 {
-                    "type": "git",
-                    "url": "git://git.gnome.org/libgweather"
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/libgweather/3.20/libgweather-3.20.3.tar.xz",
+                    "sha256": "fb6bc5b64ef5db3dc40a9798f072b83ebcafe7ff5af472aaee70600619b56c0b"
                 }
             ]
         },
@@ -106,8 +110,9 @@
             "config-opts": ["--disable-gtk", "--disable-google-auth", "--disable-uoa", "--disable-google", "--enable-vala-bindings" ],
             "sources": [
                 {
-                    "type": "git",
-                    "url": "git://git.gnome.org/evolution-data-server"
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/evolution-data-server/3.22/evolution-data-server-3.22.0.tar.xz",
+                    "sha256": "8653a9a28980e661e8b91ba335dae04a0553e12611ad155bc48fb3fb3c98653d"
                 }
             ]
         },
@@ -120,8 +125,9 @@
                             "--disable-fatal-warnings"],
             "sources": [
                 {
-                    "type": "git",
-                    "url": "git://git.gnome.org/folks"
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/folks/0.11/folks-0.11.3.tar.xz",
+                    "sha256": "2a2828a7c87fd39e5786f8f2cf0ebe47576a74974f1355c478a6dc747d7bcb64"
                 }
             ]
         },
@@ -129,8 +135,9 @@
             "name": "libchamplain",
             "sources": [
                 {
-                    "type": "git",
-                    "url": "git://git.gnome.org/libchamplain"
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/libchamplain/0.12/libchamplain-0.12.14.tar.xz",
+                    "sha256": "f1621ddec1ffe64ca01c3216db8663f60ae0bb107521195fc6856119d4b4568f"
                 }
             ]
         },
@@ -150,8 +157,9 @@
             "cleanup": [ "/doc/libgfbgraph"],
             "sources": [
                 {
-                    "type": "git",
-                    "url": "git://git.gnome.org/libgfbgraph"
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/gfbgraph/0.2/gfbgraph-0.2.3.tar.xz",
+                    "sha256": "da1179083cde2b649d7491c745250a00d292e390fd620b7dd2dd95a122dae0b6"
                 }
             ]
         },
@@ -159,8 +167,9 @@
             "name": "gnome-maps",
             "sources": [
                 {
-                    "type": "git",
-                    "url": "git://git.gnome.org/gnome-maps"
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/gnome-maps/3.22/gnome-maps-3.22.0.tar.xz",
+                    "sha256": "7ce98a683f1c38d3ba1b5d68c7d05add9f9366774678fd50fdeeda6987163c39"
                 }
             ]
         }
