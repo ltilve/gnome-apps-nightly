@@ -7,6 +7,7 @@
     "rename-appdata-file": "rhythmbox.appdata.xml",
     "rename-desktop-file": "rhythmbox.desktop",
     "rename-icon": "rhythmbox",
+    "copy-icon": true,
     "tags": ["nightly"],
     "desktop-file-name-prefix": "(Nightly) ",
     "finish-args": [
