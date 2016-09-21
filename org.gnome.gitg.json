@@ -1,12 +1,13 @@
 {
-    "app-id": "org.gnome.Gitg",
+    "app-id": "org.gnome.gitg",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "master",
+    "runtime-version": "3.22",
+    "branch": "stable",
     "sdk": "org.gnome.Sdk",
     "command": "gitg",
     "rename-desktop-file": "gitg.desktop",
-    "tags": ["nightly"],
-    "desktop-file-name-prefix": "(Nightly) ",
+    "rename-icon": "gitg",
+    "tags": [],
     "finish-args": [
         /* X11 + XShm access */
         "--share=ipc", "--socket=x11",
@@ -38,9 +39,9 @@
                          "-DBUILD_SHARED_LIBS:BOOL=ON" ],
         "sources": [
             {
-                "type": "git",
-                "url": "https://github.com/libssh2/libssh2.git",
-                "branch": "libssh2-1.6.0"
+                "type": "archive",
+                "url": "https://www.libssh2.org/download/libssh2-1.7.0.tar.gz",
+                "sha256": "e4561fd43a50539a8c2ceb37841691baf03ecb7daf043766da1b112e4280d584"
             }
         ]
       },
@@ -51,9 +52,9 @@
                          "-DTHREADSAFE=ON" ],
         "sources": [
             {
-                "type": "git",
-                "url": "https://github.com/libgit2/libgit2.git",
-                "branch": "maint/v0.24"
+                "type": "archive",
+                "url": "https://github.com/libgit2/libgit2/archive/v0.24.1.tar.gz",
+                "sha256": "60198cbb34066b9b5c1613d15c0479f6cd25f4aef42f7ec515cd1cc13a77fede"
             }
         ]
       },
@@ -61,8 +62,9 @@
         "name": "libgit2-glib",
         "sources": [
             {
-                "type": "git",
-                "url": "git://git.gnome.org/libgit2-glib"
+                "type": "archive",
+                "url": "https://download.gnome.org/sources/libgit2-glib/0.24/libgit2-glib-0.24.4.tar.xz",
+                "sha256": "3a211f756f250042f352b3070e7314a048c88e785dba9d118b851253a7c60220"
             }
         ]
       },
@@ -71,8 +73,9 @@
         "cleanup": [ "/bin/*", "/lib/peas-demo" ],
         "sources": [
             {
-                "type": "git",
-                "url": "git://git.gnome.org/libpeas"
+                "type": "archive",
+                "url": "https://download.gnome.org/sources/libpeas/1.20/libpeas-1.20.0.tar.xz",
+                "sha256": "f392fffe2dc00072a51bb2a1b274224a06bdc5f9c3b3c0ac4816909e9933d354"
             }
         ]
       },
@@ -86,8 +89,9 @@
         },
         "sources": [
             {
-                "type": "git",
-                "url": "git://git.gnome.org/libgee"
+                "type": "archive",
+                "url": "https://download.gnome.org/sources/libgee/0.18/libgee-0.18.0.tar.xz",
+                "sha256": "4ad99ef937d071b4883c061df40bfe233f7649d50c354cf81235f180b4244399"
             }
         ]
       },
@@ -105,8 +109,9 @@
         "name": "gtksourceview",
         "sources": [
             {
-                "type": "git",
-                "url": "git://git.gnome.org/gtksourceview"
+                "type": "archive",
+                "url": "https://download.gnome.org/sources/gtksourceview/3.22/gtksourceview-3.22.0.tar.xz",
+                "sha256": "70657f48732427984dce6cc812bdd3f2b701c0a49e0a0a08889705b3dadcf8e5"
             }
         ]
       },
@@ -114,8 +119,9 @@
         "name": "gitg",
         "sources": [
             {
-                "type": "git",
-                "url": "git://git.gnome.org/gitg"
+                "type": "archive",
+                "url": "https://download.gnome.org/sources/gitg/3.22/gitg-3.22.0.tar.xz",
+                "sha256": "ba6895f85c18748294075980a5e03e0936ad4e84534dbb0d8f9e29aa874ddeaf"
             }
         ]
       }
