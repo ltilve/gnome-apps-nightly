@@ -2,6 +2,7 @@
     "app-id": "org.gnome.bijiben",
     "runtime": "org.gnome.Platform",
     "runtime-version": "3.22",
+    "branch": "stable",
     "sdk": "org.gnome.Sdk",
     "command": "bijiben",
     "finish-args": [
