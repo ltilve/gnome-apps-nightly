@@ -1,5 +1,5 @@
 {
-    "app-id": "org.gnome.Gitg",
+    "app-id": "org.gnome.gitg",
     "runtime": "org.gnome.Platform",
     "runtime-version": "master",
     "sdk": "org.gnome.Sdk",
@@ -7,6 +7,7 @@
     "rename-desktop-file": "gitg.desktop",
     "tags": ["nightly"],
     "desktop-file-name-prefix": "(Nightly) ",
+    "rename-icon": "gitg",
     "finish-args": [
         /* X11 + XShm access */
         "--share=ipc", "--socket=x11",
