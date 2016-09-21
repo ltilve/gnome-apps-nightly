@@ -21,7 +21,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/libretro/bsnes-libretro.git",
-                    "branch": "libretro"
+                    "branch": "df18e30ff7fc7c9db643b14bf9526e8874c21ab6"
                 },
                 {
                     "type": "file",

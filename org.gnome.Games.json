@@ -1,11 +1,11 @@
 {
     "app-id": "org.gnome.Games",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "master",
+    "runtime-version": "3.22",
+    "branch": "stable",
     "sdk": "org.gnome.Sdk",
     "command": "gnome-games",
-    "tags": ["nightly"],
-    "desktop-file-name-prefix": "(Nightly) ",
+    "tags": [],
     "finish-args": [
         /* X11 + XShm access */
         "--share=ipc", "--socket=x11",
@@ -38,7 +38,6 @@
     ],
     "modules": [
         /* Emulator cores for libretro
-
            We build them first, because some of them are very big, and they
            change more rarely than the rest of the modules. */
         "libretro-cores/libretro-bsnes.json",
@@ -52,8 +51,9 @@
             ],
             "sources": [
                 {
-                    "type": "git",
-                    "url": "https://git.gnome.org/browse/retro-gtk"
+                    "type": "archive",
+                    "url": "https://git.gnome.org/browse/retro-gtk/snapshot/retro-gtk-0.8.tar.xz",
+                    "sha256": "28b1974445618245768e22667a80b5fc18f67f881fbd88738e4521d3117d0f20"
                 }
             ]
         },
@@ -68,8 +68,9 @@
             ],
             "sources": [
                 {
-                    "type": "git",
-                    "url": "https://git.gnome.org/browse/grilo"
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/grilo/0.3/grilo-0.3.2.tar.xz",
+                    "sha256": "f26f684a5d76aea8dbce136750bc67d2170b36575f109292fbb78ae99ec87f5b"
                 }
             ],
             "cleanup": [ "/include", "/bin" ]
@@ -91,8 +92,9 @@
             ],
             "sources": [
                 {
-                    "type": "git",
-                    "url": "https://git.gnome.org/browse/grilo-plugins"
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/grilo-plugins/0.3/grilo-plugins-0.3.3.tar.xz",
+                    "sha256": "fe66e887847fef9c361bcb7226047c43b2bc22b172aaf22afd5534947cc85b9c"
                 }
             ],
             "cleanup": [ "/include" ]
@@ -105,8 +107,9 @@
                              "--disable-tracker-writeback", "--disable-miner-user-guides"],
             "sources": [
                 {
-                    "type": "git",
-                    "url": "https://git.gnome.org/browse/tracker"
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/tracker/1.10/tracker-1.10.0.tar.xz",
+                    "sha256": "df95b4a1e7de442f66d1097b725dd3cdd739862f491453fc7d7b1f88181a12fb"
                 }
             ]
         },
@@ -114,8 +117,9 @@
             "name": "libevdev",
             "sources": [
                 {
-                     "type": "git",
-                     "url": "https://anongit.freedesktop.org/git/libevdev.git"
+                    "type": "archive",
+                    "url": "http://www.freedesktop.org/software/libevdev/libevdev-1.5.4.tar.xz",
+                    "sha256": "11fe76d62cc76fbc9dbf8e94696a80eee63780139161e5cf54c55ec21a8173a4"
                 }
             ]
         },
@@ -123,8 +127,9 @@
             "name": "gnome-games",
             "sources": [
                 {
-                    "type": "git",
-                    "url": "https://git.gnome.org/browse/gnome-games"
+                    "type": "archive",
+                    "url": "https://git.gnome.org/browse/gnome-games/snapshot/gnome-games-3.22.0.tar.xz",
+                    "sha256": "d0bd820db75bab058e5e555209bddafc2f98051be0002f2fca4969f14a58b7b0"
                 }
             ]
         }
