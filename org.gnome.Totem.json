@@ -142,7 +142,7 @@
                 }
             ]
         },
-        "org.lua.json",
+        "org.lua.modules.json",
         {
             "name": "tracker",
             "cleanup": [ "/bin", "/etc", "/libexec" ],
