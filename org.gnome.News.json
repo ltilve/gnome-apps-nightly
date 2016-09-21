@@ -1,11 +1,11 @@
 {
     "app-id": "org.gnome.News",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "master",
+    "runtime-version": "3.22",
+    "branch": "stable",
     "sdk": "org.gnome.Sdk",
     "command": "gnome-news",
-    "tags": ["nightly"],
-    "desktop-file-name-prefix": "(Nightly) ",
+    "tags": [],
     "finish-args": [
         /* X11 + XShm access */
         "--share=ipc", "--socket=x11",
@@ -36,8 +36,9 @@
             "config-opts": ["--disable-debug-tools", "--disable-udev"],
             "sources": [
                 {
-                    "type": "git",
-                    "url": "git://git.gnome.org/gnome-desktop"
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/gnome-desktop/3.22/gnome-desktop-3.22.0.tar.xz",
+                    "sha256": "cff36ccd8d0a62177a4c1513ec70d13ead3b84fdc208ba54199cf7616f05644d"
                 }
             ]
         },
@@ -46,8 +47,9 @@
             "config-opts": [ "--disable-documentation"],
             "sources": [
                 {
-                    "type": "git",
-                    "url": "git://git.gnome.org/libgrss"
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/libgrss/0.7/libgrss-0.7.0.tar.xz",
+                    "sha256": "6709c0f630a915ea7d5f1ac88ac173ef974d8d7406f43bd4be70d3e71fd554d9"
                 }
             ]
         },
@@ -61,8 +63,9 @@
                              "--disable-static" ],
             "sources": [
                 {
-                    "type": "git",
-                    "url": "git://git.gnome.org/tracker"
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/tracker/1.10/tracker-1.10.0.tar.xz",
+                    "sha256": "df95b4a1e7de442f66d1097b725dd3cdd739862f491453fc7d7b1f88181a12fb"
                 }
             ]
         },
