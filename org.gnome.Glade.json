@@ -7,6 +7,7 @@
     "rename-desktop-file": "glade.desktop",
     "rename-appdata-file": "glade.appdata.xml",
     "rename-icon": "glade",
+    "copy-icon": true,
     "tags": ["nightly"],
     "desktop-file-name-prefix": "(Nightly) ",
     "finish-args": [
