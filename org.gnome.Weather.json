@@ -1,10 +1,11 @@
 {
     "app-id": "org.gnome.Weather",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "master",
+    "runtime-version": "3.22",
+    "branch": "stable",
     "sdk": "org.gnome.Sdk",
     "command": "gnome-weather",
-    "tags": ["nightly"],
+    "tags": [],
     "finish-args": [
         /* X11 + XShm access */
         "--share=ipc", "--socket=x11",
@@ -30,14 +31,15 @@
                 "/man", "/share/man", "/share/gtk-doc",
                 "/share/vala",
                 "*.la", "*.a"],
-    "cleanup-commands": [ "desktop-file-edit \"--set-name=(Nightly) Weather\" /app/share/applications/org.gnome.Weather.Application.desktop" ],
+    "cleanup-commands": [ "desktop-file-edit \"--set-name=Weather\" /app/share/applications/org.gnome.Weather.Application.desktop" ],
     "modules": [
         {
             "name": "geocode-glib",
             "sources": [
                 {
-                    "type": "git",
-                    "url": "git://git.gnome.org/geocode-glib"
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/geocode-glib/3.20/geocode-glib-3.20.1.tar.xz",
+                    "sha256": "669fc832cabf8cc2f0fc4194a8fa464cdb9c03ebf9aca5353d7cf935ba8637a2"
                 }
             ]
         },
@@ -46,8 +48,9 @@
             "config-opts": ["--disable-vala"],
             "sources": [
                 {
-                    "type": "git",
-                    "url": "git://git.gnome.org/libgweather"
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/libgweather/3.20/libgweather-3.20.3.tar.xz",
+                    "sha256": "fb6bc5b64ef5db3dc40a9798f072b83ebcafe7ff5af472aaee70600619b56c0b"
                 }
             ]
         },
@@ -56,8 +59,9 @@
             "config-opts": ["--disable-debug-tools", "--disable-udev"],
             "sources": [
                 {
-                    "type": "git",
-                    "url": "git://git.gnome.org/gnome-desktop"
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/gnome-desktop/3.22/gnome-desktop-3.22.0.tar.xz",
+                    "sha256": "cff36ccd8d0a62177a4c1513ec70d13ead3b84fdc208ba54199cf7616f05644d"
                 }
             ]
         },
@@ -65,8 +69,9 @@
             "name": "gnome-weather",
             "sources": [
                 {
-                    "type": "git",
-                    "url": "git://git.gnome.org/gnome-weather"
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/gnome-weather/3.20/gnome-weather-3.20.2.tar.xz",
+                    "sha256": "7823ca7c08fa852232b98c2517830e3bd9b0ab80c9ac83f182c18ec140a5c18b"
                 }
             ]
         }
