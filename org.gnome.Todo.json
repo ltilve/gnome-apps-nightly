@@ -1,11 +1,11 @@
 {
     "app-id": "org.gnome.Todo",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "master",
+     "runtime-version": "3.22",
+    "branch": "stable",
     "sdk": "org.gnome.Sdk",
     "command": "gnome-todo",
-    "tags": ["nightly"],
-    "desktop-file-name-prefix": "(Nightly) ",
+    "tags": [],
     "finish-args": [
         /* X11 + XShm access */
         "--share=ipc", "--socket=x11",
@@ -41,8 +41,9 @@
             "config-opts": ["--disable-telepathy", "--disable-documentation", "--disable-backend"],
             "sources": [
                 {
-                    "type": "git",
-                    "url": "git://git.gnome.org/gnome-online-accounts"
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/gnome-online-accounts/3.22/gnome-online-accounts-3.22.0.tar.xz",
+                    "sha256": "aacce93a71bf5e687a45ae0d00f31ea0625ddd8143235d6d8c64c4ec21bbfa33"
                 }
             ]
         },
@@ -67,8 +68,9 @@
                             "--disable-uoa", "--disable-google", "--disable-weather" ],
             "sources": [
                 {
-                    "type": "git",
-                    "url": "git://git.gnome.org/evolution-data-server"
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/evolution-data-server/3.22/evolution-data-server-3.22.0.tar.xz",
+                    "sha256": "8653a9a28980e661e8b91ba335dae04a0553e12611ad155bc48fb3fb3c98653d"
                 }
             ]
         },
@@ -77,8 +79,9 @@
             "cleanup": [ "/bin/*", "/lib/peas-demo" ],
             "sources": [
                 {
-                    "type": "git",
-                    "url": "git://git.gnome.org/libpeas"
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/libpeas/1.20/libpeas-1.20.0.tar.xz",
+                    "sha256": "f392fffe2dc00072a51bb2a1b274224a06bdc5f9c3b3c0ac4816909e9933d354"
                 }
             ]
         },
@@ -86,8 +89,9 @@
             "name": "gnome-todo",
             "sources": [
                 {
-                    "type": "git",
-                    "url": "git://git.gnome.org/gnome-todo"
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/gnome-todo/3.20/gnome-todo-3.20.2.tar.xz",
+                    "sha256": "6e0452733789b0a4d2f44f9870bdba6aa4c4190615627bacf6e40e8ec9a47519"
                 }
             ]
         }
