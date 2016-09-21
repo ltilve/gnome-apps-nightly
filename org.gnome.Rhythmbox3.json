@@ -1,14 +1,15 @@
 {
     "app-id": "org.gnome.Rhythmbox3",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "master",
+    "runtime-version": "3.22",
+    "branch": "stable",
     "sdk": "org.gnome.Sdk",
     "command": "rhythmbox",
     "rename-appdata-file": "rhythmbox.appdata.xml",
     "rename-desktop-file": "rhythmbox.desktop",
     "rename-icon": "rhythmbox",
-    "tags": ["nightly"],
-    "desktop-file-name-prefix": "(Nightly) ",
+    "copy-icon": true,
+    "tags": [],
     "finish-args": [
         /* X11 + XShm access */
         "--share=ipc", "--socket=x11",
@@ -48,8 +49,9 @@
             "cleanup": [ "/bin/*", "/lib/peas-demo" ],
             "sources": [
                 {
-                    "type": "git",
-                    "url": "git://git.gnome.org/libpeas"
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/libpeas/1.20/libpeas-1.20.0.tar.xz",
+                    "sha256": "f392fffe2dc00072a51bb2a1b274224a06bdc5f9c3b3c0ac4816909e9933d354"
                 }
             ]
         },
@@ -57,8 +59,9 @@
             "name": "gmime",
             "sources": [
                 {
-                    "type": "git",
-                    "url": "git://git.gnome.org/gmime"
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/gmime/2.6/gmime-2.6.20.tar.xz",
+                    "sha256": "e0a170fb264c2ae4cecd852f4e7aaddb8d58e8f3f0b569ce2d2a4704f55bdf65"
                 }
             ],
             "cleanup": [ "/include", "/share/vala" ]
@@ -68,8 +71,9 @@
             "config-opts": [ "--disable-static" ],
             "sources": [
                 {
-                    "type": "git",
-                    "url": "git://git.gnome.org/totem-pl-parser"
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/totem-pl-parser/3.10/totem-pl-parser-3.10.7.tar.xz",
+                    "sha256": "9c8285bc3131faa309d5cba5a919d5166abc2b8cc5a0c850fe861be8b14e089c"
                 }
             ],
             "cleanup": [ "/include" ]
@@ -78,8 +82,9 @@
             "name": "rhythmbox",
             "sources": [
                 {
-                    "type": "git",
-                    "url": "git://git.gnome.org/rhythmbox"
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/rhythmbox/3.4/rhythmbox-3.4.1.tar.xz",
+                    "sha256": "039f86661cba495f9429df6572fa79e68279635809e52fa0d19f57e8db8341b6"
                 }
             ]
         }
