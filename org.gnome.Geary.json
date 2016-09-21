@@ -1,11 +1,11 @@
 {
     "app-id": "org.gnome.Geary",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "master",
+    "runtime-version": "3.22",
+    "branch": "stable",
     "sdk": "org.gnome.Sdk",
     "command": "geary",
-    "tags": ["nightly"],
-    "desktop-file-name-prefix": "(Nightly) ",
+    "tags": [],
     "rename-desktop-file": "geary.desktop",
     "rename-appdata-file": "geary.appdata.xml",
     "rename-icon": "geary",
@@ -132,8 +132,9 @@
             },
             "sources": [
                 {
-                    "type": "git",
-                    "url": "git://git.gnome.org/geary"
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/geary/0.11/geary-0.11.2.tar.xz",
+                    "sha256": "5c9e20ecd53672a42e22a436b9d3b6b9e9bf81ddf77163414a1c55986f9b4631"
                 }
             ]
         }
