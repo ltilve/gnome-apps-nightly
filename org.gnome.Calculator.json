@@ -1,12 +1,11 @@
 {
     "app-id": "org.gnome.Calculator",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "master",
+    "runtime-version": "3.22",
+    "branch": "stable",
     "sdk": "org.gnome.Sdk",
     "command": "gnome-calculator",
-    "tags": ["nightly"],
     "rename-desktop-file": "gnome-calculator.desktop",
-    "desktop-file-name-prefix": "(Nightly) ",
     "finish-args": [
         /* X11 + XShm access */
         "--share=ipc", "--socket=x11",
@@ -45,8 +44,9 @@
             "name": "gtksourceview",
             "sources": [
                 {
-                    "type": "git",
-                    "url": "git://git.gnome.org/gtksourceview"
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/gtksourceview/3.20/gtksourceview-3.20.4.tar.xz",
+                    "sha256": "7a0e6ac95ff3862bd8ef77a40e95a942939e73cb407f2eb67af600d7ce533d01"
                 }
             ]
         },
@@ -54,8 +54,9 @@
             "name": "gnome-calculator",
             "sources": [
                 {
-                    "type": "git",
-                    "url": "git://git.gnome.org/gnome-calculator"
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/gnome-calculator/3.22/gnome-calculator-3.22.0.tar.xz",
+                    "sha256": "fa0f192fc0cad43a8520d4015780ce008d9fc6201bd2dd6dc06365ba45458728"
                 }
             ]
         }
