@@ -1,13 +1,13 @@
 {
     "app-id": "org.gnome.Epiphany",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "master",
+    "runtime-version": "3.22",
+    "branch": "stable",
     "sdk": "org.gnome.Sdk",
     "command": "epiphany",
     "rename-appdata-file": "epiphany.appdata.xml",
     "rename-desktop-file": "epiphany.desktop",
-    "tags": ["nightly"],
-    "desktop-file-name-prefix": "(Nightly) ",
+    "tags": [],
     "finish-args": [
         /* X11 + XShm access */
         "--share=ipc", "--socket=x11",
@@ -75,8 +75,9 @@
             "config-opts": ["--disable-debug-tools", "--disable-udev"],
             "sources": [
                 {
-                    "type": "git",
-                    "url": "git://git.gnome.org/gnome-desktop"
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/gnome-desktop/3.22/gnome-desktop-3.22.0.tar.xz",
+                    "sha256": "cff36ccd8d0a62177a4c1513ec70d13ead3b84fdc208ba54199cf7616f05644d"
                 }
             ]
         },
@@ -84,8 +85,9 @@
             "name": "epiphany",
             "sources": [
                 {
-                    "type": "git",
-                    "url": "git://git.gnome.org/epiphany"
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/epiphany/3.22/epiphany-3.22.0.tar.xz",
+                    "sha256": "a645d17c10a1c266d4647306ea3e5496d3ca575d2ed8152947ed77e9eb623a27"
                 }
             ]
         }
