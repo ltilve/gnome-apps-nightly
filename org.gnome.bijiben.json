@@ -1,11 +1,9 @@
 {
     "app-id": "org.gnome.bijiben",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "master",
+    "runtime-version": "3.22",
     "sdk": "org.gnome.Sdk",
     "command": "bijiben",
-    "tags": ["nightly"],
-    "desktop-file-name-prefix": "(Nightly) ",
     "finish-args": [
         /* X11 + XShm access */
         "--share=ipc", "--socket=x11",
@@ -45,8 +43,9 @@
             "config-opts": ["--disable-telepathy", "--disable-documentation", "--disable-backend"],
             "sources": [
                 {
-                    "type": "git",
-                    "url": "git://git.gnome.org/gnome-online-accounts"
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/gnome-online-accounts/3.22/gnome-online-accounts-3.22.0.tar.xz",
+                    "sha256": "aacce93a71bf5e687a45ae0d00f31ea0625ddd8143235d6d8c64c4ec21bbfa33"
                 }
             ]
         },
@@ -71,8 +70,9 @@
                             "--disable-uoa", "--disable-google", "--disable-weather" ],
             "sources": [
                 {
-                    "type": "git",
-                    "url": "git://git.gnome.org/evolution-data-server"
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/evolution-data-server/3.22/evolution-data-server-3.22.0.tar.xz",
+                    "sha256": "8653a9a28980e661e8b91ba335dae04a0553e12611ad155bc48fb3fb3c98653d"
                 }
             ]
         },
@@ -85,8 +85,9 @@
                              "--disable-tracker-writeback", "--disable-miner-user-guides"],
             "sources": [
                 {
-                    "type": "git",
-                    "url": "git://git.gnome.org/tracker"
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/tracker/1.10/tracker-1.10.0.tar.xz",
+                    "sha256": "df95b4a1e7de442f66d1097b725dd3cdd739862f491453fc7d7b1f88181a12fb"
                 }
             ]
         },
@@ -116,8 +117,9 @@
             "name": "bijiben",
             "sources": [
                 {
-                    "type": "git",
-                    "url": "git://git.gnome.org/bijiben"
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/bijiben/3.21/bijiben-3.21.2.tar.xz",
+                    "sha256": "d7f05abd82da837d8d48d9f7acc6035a289d934c722fc89870d17007ba158e0d"
                 }
             ]
         }
