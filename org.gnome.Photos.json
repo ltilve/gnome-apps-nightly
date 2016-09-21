@@ -1,11 +1,11 @@
 {
     "app-id": "org.gnome.Photos",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "master",
+    "runtime-version": "3.22",
+    "branch": "stable",
     "sdk": "org.gnome.Sdk",
     "command": "gnome-photos",
-    "tags": ["nightly"],
-    "desktop-file-name-prefix": "(Nightly) ",
+    "tags": [],
     "finish-args": [
         /* X11 + XShm access */
         "--share=ipc", "--socket=x11",
@@ -44,8 +44,9 @@
             "name": "babl",
             "sources": [
                 {
-                    "type": "git",
-                    "url": "git://git.gnome.org/babl"
+                    "type": "archive",
+                    "url": "http://ftp.gnome.org/pub/gimp/babl/0.1/babl-0.1.18.tar.bz2",
+                    "sha256": "483a495bc9fa68be624e27e72d2144ebfcbbf63e061eb986db1fb82b04b6fbf9"
                 }
             ]
         },
@@ -67,8 +68,9 @@
             "config-opts": ["--disable-telepathy", "--disable-documentation", "--disable-backend"],
             "sources": [
                 {
-                    "type": "git",
-                    "url": "git://git.gnome.org/gnome-online-accounts"
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/gnome-online-accounts/3.22/gnome-online-accounts-3.22.0.tar.xz",
+                    "sha256": "aacce93a71bf5e687a45ae0d00f31ea0625ddd8143235d6d8c64c4ec21bbfa33"
                 }
             ]
         },
@@ -77,8 +79,9 @@
             "cleanup": [ "/doc" ],
             "sources": [
                 {
-                    "type": "git",
-                    "url": "git://git.gnome.org/libgfbgraph"
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/gfbgraph/0.2/gfbgraph-0.2.3.tar.xz",
+                    "sha256": "da1179083cde2b649d7491c745250a00d292e390fd620b7dd2dd95a122dae0b6"
                 }
             ]
         },
@@ -98,8 +101,9 @@
             "config-opts": ["--disable-always-build-tests", "--disable-Werror", "--disable-static" ],
             "sources": [
                 {
-                    "type": "git",
-                    "url": "git://git.gnome.org/libgdata"
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/libgdata/0.17/libgdata-0.17.6.tar.xz",
+                    "sha256": "8b6a3ff1db23bd9e5ebbcc958b29b769a898f892eed4798222d562ba69df30b0"
                 }
             ]
         },
@@ -141,8 +145,9 @@
             "cleanup": [ "/bin" ],
             "sources": [
                 {
-                    "type": "git",
-                    "url": "git://git.gnome.org/gegl"
+                    "type": "archive",
+                    "url": "http://ftp.acc.umu.se/pub/gimp/gegl/0.3/gegl-0.3.8.tar.bz2",
+                    "sha256": "06ca9e67a59da026eb941b9d323269d7c19a922f1e478acdd3791a0eef8b229b"
                 }
             ]
         },
@@ -187,8 +192,9 @@
             "config-opts": ["--disable-debug-tools", "--disable-udev"],
             "sources": [
                 {
-                    "type": "git",
-                    "url": "git://git.gnome.org/gnome-desktop"
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/gnome-desktop/3.22/gnome-desktop-3.22.0.tar.xz",
+                    "sha256": "cff36ccd8d0a62177a4c1513ec70d13ead3b84fdc208ba54199cf7616f05644d"
                 }
             ]
         },
@@ -197,8 +203,9 @@
             "cleanup": [ "/bin" ],
             "sources": [
                 {
-                    "type": "git",
-                    "url": "git://git.gnome.org/grilo"
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/grilo/0.3/grilo-0.3.2.tar.xz",
+                    "sha256": "f26f684a5d76aea8dbce136750bc67d2170b36575f109292fbb78ae99ec87f5b"
                 }
             ]
         },
@@ -207,8 +214,9 @@
             "cleanup": [ "/include" ],
             "sources": [
                 {
-                    "type": "git",
-                    "url": "git://git.gnome.org/grilo-plugins"
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/grilo-plugins/0.3/grilo-plugins-0.3.3.tar.xz",
+                    "sha256": "fe66e887847fef9c361bcb7226047c43b2bc22b172aaf22afd5534947cc85b9c"
                 }
             ]
         },
@@ -221,8 +229,9 @@
                              "--disable-tracker-writeback", "--disable-miner-user-guides"],
             "sources": [
                 {
-                    "type": "git",
-                    "url": "git://git.gnome.org/tracker"
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/tracker/1.10/tracker-1.10.0.tar.xz",
+                    "sha256": "df95b4a1e7de442f66d1097b725dd3cdd739862f491453fc7d7b1f88181a12fb"
                 }
             ]
         },
@@ -232,8 +241,9 @@
             "config-opts": [ "--disable-documentation","--disable-Werror"],
             "sources": [
                 {
-                    "type": "git",
-                    "url": "git://git.gnome.org/gnome-photos"
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/gnome-photos/3.22/gnome-photos-3.22.0.tar.xz",
+                    "sha256": "568329142855901a85f325ee014176e24f735b15a496842bcd31f5cb2615ba53"
                 }
             ]
         }
