@@ -1,14 +1,15 @@
 {
     "app-id": "org.gnome.Glade",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "master",
+    "runtime-version": "3.22",
+    "branch": "stable",
     "sdk": "org.gnome.Sdk",
     "command": "glade",
     "rename-desktop-file": "glade.desktop",
     "rename-appdata-file": "glade.appdata.xml",
     "rename-icon": "glade",
-    "tags": ["nightly"],
-    "desktop-file-name-prefix": "(Nightly) ",
+    "copy-icon": true,
+    "tags": [],
     "finish-args": [
         /* X11 + XShm access */
         "--share=ipc", "--socket=x11",
@@ -40,9 +41,9 @@
             "config-opts": ["--disable-man-pages"],
             "sources": [
                 {
-                    "type": "git",
-                    "url": "https://github.com/GNOME/glade.git",
-                    "branch": "master"
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/glade/3.20/glade-3.20.0.tar.xz",
+                    "sha256": "82d96dca5dec40ee34e2f41d49c13b4ea50da8f32a3a49ca2da802ff14dc18fe"
                 }
             ]
         }
