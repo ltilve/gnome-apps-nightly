@@ -1,12 +1,12 @@
 {
     "app-id": "org.gnome.gedit",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "master",
+    "runtime-version": "3.22",
+    "branch": "stable",
     "sdk": "org.gnome.Sdk",
     "command": "gedit",
     "rename-icon": "gedit",
-    "tags": ["nightly"],
-    "desktop-file-name-prefix": "(Nightly) ",
+    "tags": [],
     "finish-args": [
         /* X11 + XShm access */
         "--share=ipc", "--socket=x11",
@@ -36,8 +36,9 @@
             "cleanup": [ "/bin/*", "/lib/peas-demo" ],
             "sources": [
                 {
-                    "type": "git",
-                    "url": "git://git.gnome.org/libpeas"
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/libpeas/1.20/libpeas-1.20.0.tar.xz",
+                    "sha256": "f392fffe2dc00072a51bb2a1b274224a06bdc5f9c3b3c0ac4816909e9933d354"
                 }
             ]
         },
@@ -46,8 +47,9 @@
             "config-opts": ["--disable-Werror" ],
             "sources": [
                 {
-                    "type": "git",
-                    "url": "git://git.gnome.org/gtksourceview"
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/gtksourceview/3.22/gtksourceview-3.22.0.tar.xz",
+                    "sha256": "70657f48732427984dce6cc812bdd3f2b701c0a49e0a0a08889705b3dadcf8e5"
                 }
             ]
         },
@@ -55,8 +57,9 @@
             "name": "gspell",
             "sources": [
                 {
-                    "type": "git",
-                    "url": "git://git.gnome.org/gspell"
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/gspell/1.2/gspell-1.2.0.tar.xz",
+                    "sha256": "6aa550b91e13c0073ec0dfef21b6eef730186912392e11128216b90519a3443f"
                 }
             ]
         },
@@ -64,8 +67,9 @@
             "name": "gedit",
             "sources": [
                 {
-                    "type": "git",
-                    "url": "git://git.gnome.org/gedit"
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/gedit/3.22/gedit-3.22.0.tar.xz",
+                    "sha256": "063b5a0b5dcc8f540f6e8c3ea1c22cf8a3a19edffc25315a1b6bc51d462b3f45"
                 }
             ]
         }
