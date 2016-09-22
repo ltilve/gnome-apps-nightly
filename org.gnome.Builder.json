@@ -19,7 +19,9 @@
         /* Needs to talk to the network: */
         "--share=network",
         "--talk-name=org.gtk.vfs.*",
+        /* Needs access to policykit for flatpak and sysprof */
         "--system-talk-name=org.freedesktop.PolicyKit1",
+        /* Needs access to host sysprofd for profiling */
         "--system-talk-name=org.gnome.Sysprof2",
         /* Needed for dconf to work (+ host or homedir read access from above) */
         "--filesystem=xdg-run/dconf",
@@ -32,12 +34,14 @@
         "--env=SSL_CERT_DIR=/etc/ssl/certs",
         "--env=SSL_CERT_FILE=/etc/ssl/cert.pem",
         "--filesystem=/etc/ssl:ro",
-        "--filesystem=/etc/ca-certificates:ro"
+        "--filesystem=/etc/ca-certificates:ro",
+        "--filesystem=/var/lib/flatpak"
     ],
     "build-options" : {
         "cflags": "-O2 -g",
         "cxxflags": "-O2 -g",
         "env": {
+            "MOUNT_FUSE_PATH": "../tmp/",
             "V": "1"
         }
     },
@@ -47,6 +51,58 @@
                 "/share/vala",
                 "*.la", "*.a"],
     "modules": [
+        {
+            "name": "libfuse",
+            "cleanup": [ "/bin" ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/libfuse/libfuse/releases/download/fuse_2_9_5/fuse-2.9.5.tar.gz",
+                    "sha256": "579f371cc5ffc1afca7057512bf7d52988a9ede57859a7c55e5b9f72435cdbb5"
+                }
+            ]
+        },
+        {
+            "name": "libgsystem",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "git://git.gnome.org/libgsystem.git"
+                }
+            ]
+        },
+        {
+            "name": "ostree",
+            "config-opts": [ "--disable-man" ],
+            "cleanup": [ "/bin", "/etc/grub.d", "/libexec" ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/ostreedev/ostree.git"
+                }
+            ]
+        },
+        {
+            "name": "flatpak",
+            "config-opts": [ "--disable-documentation",
+                             "--disable-seccomp",
+                             "--disable-sandboxed-triggers",
+                             "--disable-system-helper" ],
+            "cleanup": [ "/etc/profile.d",
+                         "/libexec",
+                         "/lib/systemd",
+                         "/share/dbus-1/interfaces/org.freedesktop.*",
+                         "/share/dbus-1/services/org.freedesktop.*",
+                         "/share/gdm" ],
+            "post-install": [ "cp /usr/bin/update-mime-database /app/bin",
+                              "cp /usr/bin/update-desktop-database /app/bin" ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/alexlarsson/flatpak.git"
+                }
+            ]
+        },
         {
             "name": "polkit",
             "config-opts": [ "--disable-polkitd", "--disable-man-pages", "--disable-introspection" ],
