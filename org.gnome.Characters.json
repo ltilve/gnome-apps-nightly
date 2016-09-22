@@ -1,10 +1,10 @@
 {
     "app-id": "org.gnome.Characters",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "master",
+    "runtime-version": "3.22",
+    "branch": "stable",
     "sdk": "org.gnome.Sdk",
-    "tags": ["nightly"],
-    "desktop-file-name-prefix": "(Nightly) ",
+    "tags": [],
     "rename-icon": "gnome-characters",
     "finish-args": [
         /* X11 + XShm access */
