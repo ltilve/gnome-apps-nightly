@@ -1,0 +1,86 @@
+{
+    "app-id": "org.gnome.TweakTool",
+    "runtime": "org.gnome.Platform",
+    "runtime-version": "master",
+    "sdk": "org.gnome.Sdk",
+    "command": "gnome-tweak-tool",
+    "tags": ["nightly"],
+    "copy-icon": true,
+    "rename-icon": "gnome-tweak-tool",
+    "rename-desktop-file": "gnome-tweak-tool.desktop",
+    "desktop-file-name-prefix": "(Nightly) ",
+    "finish-args": [
+        /* X11 + XShm access */
+        "--share=ipc", "--socket=x11",
+
+        /* Wayland access */
+        "--socket=wayland",
+
+        /* Shell detection and extension management */
+        "--talk-name=org.gnome.Shell",
+
+        /* dconf */
+        "--filesystem=/usr/share/glib-2.0/schemas:ro",
+        "--filesystem=xdg-run/dconf", "--filesystem=~/.config/dconf:rw",
+        "--talk-name=ca.desrt.dconf", "--env=DCONF_USER_CONFIG_DIR=.config/dconf"
+    ],
+    "build-options": {
+        "cflags": "-O2 -g"
+    },
+    "cleanup": [
+        "/include", "/lib/*.la", "/lib/*.a", "/lib/pkgconfig", "/share/gir-1.0"
+    ],
+    "modules": [
+        {
+            "name": "pycairo",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "http://cairographics.org/releases/py2cairo-1.10.0.tar.bz2",
+                    "sha256": "d30439f06c2ec1a39e27464c6c828b6eface3b22ee17b2de05dc409e429a7431"
+                },
+                {
+                    "type": "shell",
+                    "commands": [
+                        "touch ChangeLog",
+                        "autoreconf -i"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "pygobject",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "git://git.gnome.org/pygobject"
+                }
+            ],
+            "config-opts": [
+                "--with-python=python2"
+            ]
+        },
+        {
+            "name": "gnome-desktop",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "git://git.gnome.org/gnome-desktop"
+                }
+            ]
+        },
+        {
+            "name": "gnome-tweak-tool",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "git://git.gnome.org/gnome-tweak-tool"
+                },
+                {
+                    "type": "patch",
+                    "path": "gtweak-hardcode-system-dirs.patch"
+                }
+            ]
+        }
+    ]
+}
