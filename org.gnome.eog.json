@@ -1,14 +1,14 @@
 {
     "app-id": "org.gnome.eog",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "master",
+    "runtime-version": "3.22",
+    "branch": "stable",
     "sdk": "org.gnome.Sdk",
     "command": "eog",
     "rename-desktop-file": "eog.desktop",
     "rename-appdata-file": "eog.appdata.xml",
     "rename-icon": "eog",
-    "tags": ["nightly"],
-    "desktop-file-name-prefix": "(Nightly) ",
+    "tags": [],
     "finish-args": [
         /* X11 + XShm access */
         "--share=ipc", "--socket=x11",
@@ -37,8 +37,9 @@
             "config-opts": ["--disable-debug-tools", "--disable-udev"],
             "sources": [
                 {
-                    "type": "git",
-                    "url": "git://git.gnome.org/gnome-desktop"
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/gnome-desktop/3.22/gnome-desktop-3.22.0.tar.xz",
+                    "sha256": "cff36ccd8d0a62177a4c1513ec70d13ead3b84fdc208ba54199cf7616f05644d"
                 }
             ]
         },
@@ -47,8 +48,9 @@
             "cleanup": [ "/bin/*", "/lib/peas-demo" ],
             "sources": [
                 {
-                    "type": "git",
-                    "url": "git://git.gnome.org/libpeas"
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/libpeas/1.20/libpeas-1.20.0.tar.xz",
+                    "sha256": "f392fffe2dc00072a51bb2a1b274224a06bdc5f9c3b3c0ac4816909e9933d354"
                 }
             ]
         },
@@ -57,8 +59,9 @@
             "config-opts": [ ],
             "sources": [
                 {
-                    "type": "git",
-                    "url": "git://git.gnome.org/eog"
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/eog/3.20/eog-3.20.4.tar.xz",
+                    "sha256": "968774cc07ea0d3c27ac552dc0f1d51cf682b9036d342b447688a208f31a5be3"
                 }
             ]
         }
