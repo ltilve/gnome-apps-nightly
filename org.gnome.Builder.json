@@ -101,7 +101,7 @@
                 {
                     "type": "git",
                     "branch": "cb180540a68da556254baf9019ad752438d53865",
-                    "url": "https://github.com/alexlarsson/flatpak.git"
+                    "url": "https://github.com/flatpak/flatpak.git"
                 }
             ]
         },
