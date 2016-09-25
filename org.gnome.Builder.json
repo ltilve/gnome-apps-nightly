@@ -99,7 +99,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://github.com/alexlarsson/flatpak.git"
+                    "url": "https://github.com/flatpak/flatpak.git"
                 }
             ]
         },
