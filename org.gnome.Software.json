@@ -19,6 +19,8 @@
         "--filesystem=~/.local/share/flatpak",
         /* Needs to talk to the network: */
         "--share=network",
+        /* Needed to save login credentials */
+        "--talk-name=org.freedesktop.secrets",
         /* Needed for dconf to work (unfortunately needs homedir read access) */
         "--filesystem=xdg-run/dconf", "--filesystem=~/.config/dconf:ro",
         "--talk-name=ca.desrt.dconf", "--env=DCONF_USER_CONFIG_DIR=.config/dconf"
