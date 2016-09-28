@@ -89,7 +89,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "git://git.gnome.org/ostree"
+                    "url": "https://github.com/ostreedev/ostree.git"
                 }
             ]
         },
@@ -129,7 +129,7 @@
             ]
         },
         {
-            "name": "gnome-software",
+            "name": "gtkspell3",
             "sources": [
                 {
                     "type": "archive",
