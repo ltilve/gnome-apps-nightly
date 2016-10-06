@@ -21,6 +21,9 @@
         "--talk-name=org.gnome.evolution.dataserver.Calendar7",
         "--talk-name=org.gnome.evolution.dataserver.Sources5",
         "--talk-name=org.gnome.evolution.dataserver.Subprocess.Backend.*",
+
+        /* Connectivity check */
+        "--system-talk-name=org.freedesktop.NetworkManager",
         /* Needed to save OAuth token from OpenStreetMap */
         "--talk-name=org.freedesktop.secrets",
         /* Needed to get geo-positioning */
