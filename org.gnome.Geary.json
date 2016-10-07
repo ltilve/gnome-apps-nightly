@@ -23,10 +23,6 @@
         /* Pulseaudio */
         "--socket=pulseaudio",
 
-        /* Read-write access to home directory */
-        "--filesystem=host:ro",
-        "--filesystem=home:rw",
-
         /* Needs to talk to the network: */
         "--share=network",
 
