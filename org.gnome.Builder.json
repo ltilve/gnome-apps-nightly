@@ -211,8 +211,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/libpeas/1.18/libpeas-1.18.0.tar.xz",
-                    "sha256": "bf49842c64c36925bbc41d954de490b6ff7faa29b45f6fd9e91ddcc779165e26"
+                    "url": "https://download.gnome.org/sources/libpeas/1.20/libpeas-1.20.0.tar.xz",
+                    "sha256": "f392fffe2dc00072a51bb2a1b274224a06bdc5f9c3b3c0ac4816909e9933d354"
                 }
             ]
         },
@@ -277,8 +277,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/sysprof/3.22/sysprof-3.22.0.tar.xz",
-                    "sha256": "c31ed9443c9c03c6a5ae01d57c05bb0a78d8f00cde8615d8f689eeb1772d735c"
+                    "url": "https://download.gnome.org/sources/sysprof/3.22/sysprof-3.22.1.tar.xz",
+                    "sha256": "9ec2600b58eaf6797bad0a194f1cc95d3c94f3931fac20b58add0f3a1c9190e1"
                 }
             ]
         },
@@ -287,8 +287,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gnome-builder/3.22/gnome-builder-3.22.0.tar.xz",
-                    "sha256": "0caf7d917aefb3fa42aa63dbb57d635fae24889c0df1fa585ee29c095ea3dda7"
+                    "url": "https://download.gnome.org/sources/gnome-builder/3.22/gnome-builder-3.22.1.tar.xz",
+                    "sha256": "9386a84b1999c0dad83791808a9918f86200e9e1dfffa550a53e04cae3423652"
                 }
             ]
         }
