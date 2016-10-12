@@ -276,9 +276,9 @@
             "cleanup": [ "/bin/*", "/libexec/sysprof" ],
             "sources": [
                 {
-                    "type": "archive",
-                    "url": "https://download.gnome.org/sources/sysprof/3.22/sysprof-3.22.1.tar.xz",
-                    "sha256": "9ec2600b58eaf6797bad0a194f1cc95d3c94f3931fac20b58add0f3a1c9190e1"
+                    "type": "git",
+                    "url": "git://git.gnome.org/sysprof.git",
+                    "branch": "4b95b38c0a2f984fce24af2e6fa717549df9c9d5"
                 }
             ]
         },
