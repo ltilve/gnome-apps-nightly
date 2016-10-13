@@ -45,11 +45,13 @@
             "V": "1"
         }
     },
-    "cleanup": ["/include", "/lib/pkgconfig",
+    "cleanup": ["/include", "/lib/pkgconfig", "/lib/cmake",
                 "/share/pkgconfig", "/share/aclocal",
+                "/share/mm-common", "/bin/mm-*",
                 "/man", "/share/man", "/share/gtk-doc",
                 "/share/doc", "/share/vala", "/share/appdata",
                 "/share/bash-completions",
+                "/lib/sigc++-2.0", "/lib/glibmm-2.4", "/lib/giomm-2.4",
                 "*.la", "*.a"],
     "modules": [
         {
@@ -198,7 +200,6 @@
             "cmake": true,
             "config-opts": [ "-DBUILD_SHARED_LIBS:BOOL=ON",
                              "-DTHREADSAFE=ON" ],
-            "cleanup": [ "/lib/cmake" ],
             "sources": [
                 {
                     "type": "git",
@@ -238,7 +239,6 @@
         {
             "name": "mm-common",
             "config-opts": [ "--disable-documentation" ],
-            "cleanup": [ "/bin/*", "/share/mm-common" ],
             "sources": [
                 {
                     "type": "archive",
@@ -250,7 +250,6 @@
         {
             "name": "libsigcplusplus",
             "config-opts": [ "--disable-documentation" ],
-            "cleanup": [ "/lib/sigc++-2.0" ],
             "sources": [
                 {
                     "type": "archive",
@@ -262,7 +261,6 @@
         {
             "name": "glibmm",
             "config-opts": [ "--disable-documentation" ],
-            "cleanup": [ "/lib/glibmm-2.4", "/lib/giomm-2.4" ],
             "sources": [
                 {
                     "type": "archive",
