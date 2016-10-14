@@ -278,7 +278,7 @@
                 {
                     "type": "git",
                     "url": "git://git.gnome.org/sysprof.git",
-                    "branch": "4b95b38c0a2f984fce24af2e6fa717549df9c9d5"
+                    "branch": "a760a6ca1028f9231296c50f11bf01498e84fdbb"
                 }
             ]
         },
