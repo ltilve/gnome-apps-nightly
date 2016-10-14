@@ -286,9 +286,10 @@
             "name": "gnome-builder",
             "sources": [
                 {
-                    "type": "archive",
-                    "url": "https://download.gnome.org/sources/gnome-builder/3.22/gnome-builder-3.22.1.tar.xz",
-                    "sha256": "9386a84b1999c0dad83791808a9918f86200e9e1dfffa550a53e04cae3423652"
+                    "type": "git",
+                    "url": "git://git.gnome.org/gnome-builder.git",
+		    /* tagged for flatpak subprocess fix */
+                    "branch": "fa6bb4618528f7370172c54e4549cf54c440ff49"
                 }
             ]
         }
