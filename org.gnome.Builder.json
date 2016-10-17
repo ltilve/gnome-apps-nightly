@@ -278,7 +278,7 @@
                 {
                     "type": "git",
                     "url": "git://git.gnome.org/sysprof.git",
-                    "branch": "a760a6ca1028f9231296c50f11bf01498e84fdbb"
+                    "branch": "71e1134cbce95ecf8b9dee1d3a1c4328419a2aec"
                 }
             ]
         },
@@ -289,7 +289,7 @@
                     "type": "git",
                     "url": "git://git.gnome.org/gnome-builder.git",
 		    /* tagged for flatpak subprocess fix */
-                    "branch": "fa6bb4618528f7370172c54e4549cf54c440ff49"
+                    "branch": "4e2f30405d55a3e4bd7278655ca2fa3f01a9c27f"
                 }
             ]
         }
