@@ -65,6 +65,7 @@
             "cleanup": ["/lib/evolution-data-server/*-backends", "/libexec", "/share/dbus-1/services" ],
             "config-opts": ["--disable-google-auth",
                             "--disable-uoa", "--disable-google", "--disable-weather" ],
+            "cmake": true,
             "sources": [
                 {
                     "type": "git",
